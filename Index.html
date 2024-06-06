@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="scripts/script.js" defer></script>
+    <script type="module" src="scripts/recipes.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="logo" id="logo">
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Recipes for the Functional Adult of the 21st Century</h1>
+        <section class="hero">
+            <img src="images/hero-image.webp" alt="Delicious food" class="hero-image">
+            
+            
+        </section>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam fugiat minima sunt ullam expedita dolorem nihil tempora deleniti, cum dolor facilis dolores iusto totam officiis eum provident maxime amet numquam!</p>
+
+        <div id="recipe-of-the-day">
+            
+        </div>
+
+        <section class="carousel-body">
+            <div class="carousel">
+            <div class="left">
+                <img id="left" src="images/left.svg" alt="left" loading="lazy">
+            </div>
+
+            <div class="carousel-images"> <!-- Item 1 -->
+                <div class="image">
+                    
+                </div>
+
+                <div class="carousel-text">
+                    <h3>Recipe Title</h3>
+                </div>
+            </div>
+            
+
+            <div class="right" id="right">
+                <img src="images/right.svg" alt="right" loading="lazy">
+            </div>
+            </div>
+            <div class="dots"></div>
+            <!-- Agregar más elementos del carrusel según sea necesario -->
+        
+        </section>
+
+        <section class="subscription-container">
+            <h2>Subscribe for Daily Recipes</h2>
+            <form id="subscription-form">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+    
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <fieldset>
+                    <legend>Preferred Language:</legend>
+                    <label><input type="radio" name="language" value="english" required> English</label>
+                    <label><input type="radio" name="language" value="spanish"> Spanish</label>
+                    <label><input type="radio" name="language" value="portuguese"> Portuguese</label>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Select the types of recipes you are interested in:</legend>
+                    <label><input type="checkbox" name="recipe-type" value="vegetarian"> Vegetarian</label>
+                    <label><input type="checkbox" name="recipe-type" value="meat"> Meat</label>
+                    <label><input type="checkbox" name="recipe-type" value="desserts"> Desserts</label>
+                    <label><input type="checkbox" name="recipe-type" value="quick-easy"> Quick & Easy</label>
+                    <label><input type="checkbox" name="recipe-type" value="international"> International</label>
+                </fieldset>
+    
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span>| Lautaro Guevara | Argentina</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

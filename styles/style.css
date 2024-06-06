@@ -1,44 +1,321 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
+
+/* Definición de variables de color */
+
+:root{
+    --primary-color:#4caf50;
+    --secondary-color:#ff6347;
+    --accent1-color:#333333;
+    --accent2-color: #FFD700;
+    --background-color:#f4f4f4;
+    --border-color: #dddddd;
+
+    --heading-font: "Pacifico", cursive;
+    --paragraph-font: "Roboto", sans-serif;
+
+    --nav-background-color:var(--primary-color);
+    --nav-link-color: #eeee;
+    --nav-hover-link-color:var(--accent1-color);
+    --nav-hover-background-color:var(--accent2-color);
+}
+
+
+body {
+    font-family: var(--paragraph-font);
+    line-height: 1.6;
+}
+
+/* header styles */
 
 header {
-    background-color: #FF6347;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-background-color);
     padding: 1rem 0;
-    text-align: center;
 }
 
-h1, h2 {
-    font-family: 'Montserrat', sans-serif;
+#logo  {
+    height: 100px;
 }
 
-main {
-    margin: 2rem auto;
-    max-width: 800px;
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+}
+
+.navigation ul li {
+    margin: 0 1rem;
+    
+}
+
+.navigation ul li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
     padding: 1rem;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    margin-bottom: 2rem;
+.navigation li:hover{
+    a {
+        color: black;
+    }
+    background-color: var(--nav-hover-background-color);
+    border-radius: 4px;
+    
+    
 }
 
-section#color-schema {
-    color: #228B22;
+
+
+/* Main styles */
+main{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-section#typography {
-    color: #FF6347;
+h1{
+    text-align: center;
+    font-family: var(--heading-font);
 }
 
-img {
-    display: block;
-    margin: 1rem auto;
-    max-width: 100%;
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+
+    background-color: var(--background-color);
+    margin-bottom: 1rem;
+}
+
+.hero img {
+
+    width: 100%;
+}
+
+
+
+#recipe-of-the-day {
+    width: 80%;
+    text-align: center;
+    
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+#recipe-of-the-day h2{
+    padding-bottom: 2rem;
+    font-size: 32px;
+    font-family: var(--heading-font);
+    
+}
+
+.recipe-of-the-day-info{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+#recipe-of-the-day img {
+    display: flex;
+    justify-content: start;
+    height: 100px;
+}
+
+.recipe-of-the-day-text {
+    text-align: left;
+}
+
+/* carousel styles */
+.carousel-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.carousel-images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 90%;
+}
+
+.image {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    height: auto;
+    min-width: 90%;
+    max-width: 90%;
+    border-radius: 15px ;
+    margin: 5px;
+    object-fit: cover;
+}
+
+.carousel-text {
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    transform: translateY(0px);
+    margin-bottom: 9px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(63, 106, 138, 0.21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.carousel-text h3{
+    text-shadow: 0px 0px 15px black;
+    padding-top: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 27px;
+}
+
+.carousel-images .carousel-text{
+    width: 600px;
+    height: 100px;
+    transition: 1s;
+}
+
+.carousel-images:hover .carousel-text{
+    transition: height 1s, transform 1s, background-color 1s;
+    transform: translateY(-150px);
+    height: 300px;
+    background-color: rgba(63, 106, 138, 0.71);
+}
+
+.dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots p{
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: -50px;
+    color: black;
+}
+
+.dots .bold{
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #5E17EB ;
+}
+
+/* Footer styles */
+
+footer {
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    text-align: center;
+    padding: 1rem 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.subscription-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.subscription-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#subscription-form label {
+    margin-top: 10px;
+    color: #555;
+}
+
+#subscription-form input[type="text"],
+#subscription-form input[type="email"],
+#subscription-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#subscription-form fieldset {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#subscription-form legend {
+    padding: 0 5px;
+    color: #333;
+}
+
+#subscription-form label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#subscription-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#subscription-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#subscription-form button:hover {
+    background-color: #218838;
+}
+
+#subscription-message {
+    margin-top: 20px;
+    color: #28a745;
 }
