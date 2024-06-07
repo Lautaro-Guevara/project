@@ -301,7 +301,7 @@ footer {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #28a745;
+    background-color: #ff6347;
     color: #fff;
     cursor: pointer;
     margin-top: 20px;
@@ -309,7 +309,7 @@ footer {
 }
 
 #subscription-form button:hover {
-    background-color: #218838;
+    background-color: #bb4530;
 }
 
 #subscription-message {

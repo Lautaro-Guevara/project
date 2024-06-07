@@ -33,7 +33,7 @@ main{
 }
 
 h1{
-    color: var(--accent2-color);
+    color: var(--accent1-color);
     margin-left: 1rem;
 }
 
@@ -45,7 +45,9 @@ p{
 
 h3{
     text-align: center;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-family: var(--heading-font);
 }
 
 .ingredients{
