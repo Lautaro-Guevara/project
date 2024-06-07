@@ -21,7 +21,7 @@
     --paragraph-font: "Roboto", sans-serif;
 
     --nav-background-color:var(--primary-color);
-    --nav-link-color: #000;
+    --nav-link-color: #eee;
     --nav-hover-link-color:var(--accent1-color);
     --nav-hover-background-color:var(--accent2-color);
 }
@@ -229,7 +229,7 @@ h1{
 
 footer {
     background-color: var(--nav-background-color);
-    color: var(--nav-link-color);
+    color: #000;
     text-align: center;
     padding: 1rem 0;
     bottom: 0;
