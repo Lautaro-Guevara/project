@@ -33,7 +33,7 @@ main{
 }
 
 h1{
-    color: var(--secondary-color);
+    color: var(--accent2-color);
     margin-left: 1rem;
 }
 
@@ -48,14 +48,15 @@ h3{
     color: var(--secondary-color);
 }
 
-ul{
+.ingredients{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    
 }
 
 li{
     text-wrap:wrap;
-    padding-left: 1rem;
+    margin-left: 3rem;
 }
 div{
     display: flex;

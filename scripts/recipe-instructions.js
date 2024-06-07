@@ -11,7 +11,7 @@ if (recipe){
     recipeDetails.innerHTML = `
     <p>${recipe.description}</p>
         <h3>Ingredients</h3>
-        <ul>${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}</ul>
+        <ul class="ingredients">${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}</ul>
         <h3>Instructions</h3>
         <ol>${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join('')}</ol>
         <div>

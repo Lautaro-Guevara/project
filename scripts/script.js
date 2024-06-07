@@ -17,9 +17,9 @@ console.log("Hoy es", today)
     const recipeOfTheDay = recipes[recipeOfTheDayIndex];
     const recipeElement = document.getElementById("recipe-of-the-day");
     recipeElement.innerHTML = `
-        <h2>Recipe of the Day</h2>
+        <div class="recipe-of-the-day-img"><img src="${recipeOfTheDay.image}" alt="${recipeOfTheDay.recipeName}"></div>
         <div class="recipe-of-the-day-info">
-            <img src="${recipeOfTheDay.image}" alt="${recipeOfTheDay.recipeName}">
+            <h2>Recipe of the Day</h2>
             <div class="recipe-of-the-day-text">
                 <a><h3>${recipeOfTheDay.recipeName}</h3></a>
                 <p>${recipeOfTheDay.description}</p>

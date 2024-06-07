@@ -198,11 +198,6 @@ const recipeContainer = document.querySelector(".recipe-container");
             linkElement.appendChild(nameElement);
             recipeCard.appendChild(linkElement)
 
-            //Recipe Tags
-            const tagsElement = document.createElement("li");
-            tagsElement.textContent = recipe.tags;
-
-            recipeCard.appendChild(tagsElement);
 
             recipeContainer.appendChild(recipeCard);
         });
@@ -223,4 +218,3 @@ document.getElementsByClassName("dots")
 
 export default recipes
 
-""
